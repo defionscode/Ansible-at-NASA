@@ -4,7 +4,7 @@ monkey.patch_all()
 import os
 import redis
 
-from cyoa import app, redis_db, socketio
+from nasa import app, redis_db, socketio
 from flask.ext.script import Manager, Shell
 
 manager = Manager(app)
