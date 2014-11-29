@@ -40,7 +40,7 @@ Break long lines using yaml line continuation
 
 * group_vars/all - Contains variable definitions that apply to all roles.
 * "common" role - Contains variables and tasks that apply to all roles.
-* Roles variables - Variables specific to a role should be defined in <role>/vars/main.yml. All variables should be prefixed with the role name.
+* Roles variables - Variables specific to a role should be defined in SOME_ROLE/vars/main.yml. All variables should be prefixed with the role name.
 * Variables that are environment specific and that need to be overridden should be in all caps.
 
 ### Role naming conventions 
