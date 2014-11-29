@@ -23,19 +23,25 @@
 
                 <section>
                     <div>
-                        <h2>Text "left" or "right" to</h2>
+			<h4>What is your level of familiarity with Ansible?</h4>
+			</br>
+                        <h3>Text "noob", "some" or "great" to</h3>
                         <!-- replace this with your Twilio number -->
                         <h1>571-257-4947</h1>
                     </div>
                     <br>
                     <div style="display: inline;">
                         <div style="float: left;">
-                            <h2><a href="#/2">left</a></h2>
-                            <h1><div id="left">0</div> votes</h1>
+                            <h3><a href="#/2">noob</a></h3>
+                            <h2><div id="noob">0</div> votes</h2>
                         </div>
                         <div style="float: right;">
-                            <h2><a href="#/3">right</a></h2>
-                            <h1><div id="right">0</div> votes</h1>
+                            <h3><a href="#/3">great</a></h3>
+                            <h2><div id="great">0</div> votes</h2>
+                        </div>
+                        <div>
+                            <h3>Some</h3>
+                            <h2><div id="some">0</div> votes</h2>
                         </div>
                     </div>
                 </section>
@@ -74,7 +80,7 @@
                 var socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
 
                 /* add and edit choices here */
-                var appropriate_choices = ['left','right',];
+                var appropriate_choices = ['noob','some','great'];
 
                 socket.on('msg', function(msg) {
                     /* ensure valid vote and div exists */
