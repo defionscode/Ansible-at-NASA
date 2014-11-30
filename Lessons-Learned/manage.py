@@ -21,8 +21,9 @@ def runserver():
 @manager.command
 def clear_redis():
     redis_cli = redis.StrictRedis(host='localhost', port='6379', db='0')
-    redis_cli.delete('left')
-    redis_cli.delete('right')
+    redis_cli.delete('noob')
+    redis_cli.delete('some')
+    redis_cli.delete('great')
 
 if __name__ == '__main__':
     manager.run()

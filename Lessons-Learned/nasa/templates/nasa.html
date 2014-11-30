@@ -17,8 +17,8 @@
         <div class="reveal">
             <div class="slides">
                 <section>
-                    <h1>Choose Your Own Adventure!</h1>
-                    <h3>With SMS voting</h3>
+                    <h1>Ansible @ NASA</h1>
+                    <h3>Lessons Learned</h3>
                 </section>
 
                 <section>
@@ -32,30 +32,62 @@
                     <br>
                     <div style="display: inline;">
                         <div style="float: left;">
-                            <h3><a href="#/2">noob</a></h3>
-                            <h2><div id="noob">0</div> votes</h2>
+                            <h2><div id="noob">0</div><h2 style="color: green">noob</h2> 
                         </div>
                         <div style="float: right;">
-                            <h3><a href="#/3">great</a></h3>
-                            <h2><div id="great">0</div> votes</h2>
+                            <h2><div id="great">0</div><h2 style="color: orange">great</h2>
                         </div>
                         <div>
-                            <h3>Some</h3>
-                            <h2><div id="some">0</div> votes</h2>
+                            <h2><div id="some">0</div><h2 style="color: teal">Some</h2>
                         </div>
                     </div>
                 </section>
 
-                <!-- linked from first choice -->
-                <section>
-                    <h1>Left</h1>
+		<section data-markdown data-separator="---" data-vertical="--"> 
+			<script type="text/template">
+				## About Me
+				*  Based in Washington D.C
+				*  Former Military
+				*  StartUp Developer
+			  	   *  JavaScript stacks & HTML5
+				*  DevOps @ NASA WESTPrime
+				*  Ansible as of yesterday
+
+				---
+
+				### **What are we going to discuss?**
+				![hmmm](http://user-cdn.spring.me/photos/20120509/n4faa1ff76b6a9.jpg)
+				---
+					
+				![Ansible Logo](https://avatars3.githubusercontent.com/u/1507452?v=3&s=200) 
+				#+
+				![NASA Logo](http://bolo.berkeley.edu/drupal/sites/default/files/AboutUs/NASALogo.jpg)
+
+				---
+
+				## Biggest Lessons
+				* Access Control
+				* Speed
+				* Directory Structure & Style-Guide
+				* Bastion/Jump Servers ⇒ To Not
+				* Upgrading Ansible w/o losing your Custom Hacks
+				* AWS Tags to boost efficiency
+
+				---
+
+				##Access Control
+				![Old Rusty Lock](http://srpearceart.com/wp-content/uploads/2013/11/Old-Lock2.jpg)
+				--
+
+				## Ansible-Core Only
+			</script>
                 </section>
 
-                <!-- linked from second choice -->
-                <section>
-                    <h1>Right</h1>
-                </section>
+		<section data-markdown>
+                        <script type="text/template">
 
+                        </script>
+                </section>
             </div>
         </div>
 
@@ -63,6 +95,7 @@
             src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
         <script src="/static/js/reveal.js"></script>
+	<script src="/static/js/head.min.js"></script>
 
         <script>
             Reveal.initialize({
@@ -72,7 +105,14 @@
                 center: true,
                 theme: Reveal.getQueryHash().theme,
                 transition: Reveal.getQueryHash().transition || 'default',
-                dependencies: []
+                dependencies: [
+                                        { src: '/static/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                                        { src: '/static/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                        { src: '/static/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                        { src: '/static/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                                        { src: '/static/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                                        { src: '/static/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
             });
 
             $(document).ready(function() {
