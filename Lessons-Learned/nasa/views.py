@@ -29,6 +29,5 @@ def twilio_callback():
                               'val': redis_db.get(message)},
                       namespace='/nasa')
     resp = twiml.Response()
-    resp.message("Thanks for your vote! For links about Ansible and/or this\
-    presentation, please go here: http://bit.ly/1tAGcyo")
+    resp.message("Thanks for your vote! For contact info, links about Ansible or this presentation, please go here: http://bit.ly/1tAGcyo")
     return str(resp)
