@@ -1,0 +1,3 @@
+[submodule "ansible-system-patching"]
+	path = ansible-system-patching
+	url = git@github.com:MindPointGroup/ansible-system-patching.git
