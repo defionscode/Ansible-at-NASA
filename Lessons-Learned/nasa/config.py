@@ -1,3 +1,7 @@
+# Copyright (c) 2014, Matt Makai
+# All rights reserved.
+# Full License can be read here: http://bit.ly/1qBgqzn
+
 import os
 
 # General Flask app settings

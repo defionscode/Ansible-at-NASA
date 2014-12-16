@@ -1,3 +1,7 @@
+# Copyright (c) 2014, Matt Makai
+# All rights reserved.
+# Full License can be read here: http://bit.ly/1qBgqzn
+
 from flask import Flask
 from flask.ext.socketio import SocketIO
 import redis
